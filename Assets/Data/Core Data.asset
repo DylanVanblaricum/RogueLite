@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bfd4d7e234ffb541b4aaf2b8aefc8dd, type: 3}
+  m_Name: Core Data
+  m_EditorClassIdentifier: 
+  characterStates:
+  - stateName: Neutral
+    index: 0
+    length: 60
+    loop: 1
+    events:
+    - start: 0
+      end: 60
+      variable: 0.7
+      script: 3
+  - stateName: Jump
+    index: 0
+    length: 60
+    loop: 0
+    events:
+    - start: 0
+      end: 0
+      variable: 0.25
+      script: 0
+    - start: 0
+      end: 60
+      variable: 0.3
+      script: 3
+  - stateName: Dash
+    index: 0
+    length: 0
+    loop: 0
+    events:
+    - start: 0
+      end: 0
+      variable: 0.5
+      script: 0
+  - stateName: Light Attack
+    index: 0
+    length: 0
+    loop: 0
+    events: []
+  - stateName: Heavy Attack
+    index: 0
+    length: 0
+    loop: 0
+    events: []
+  characterScripts:
+  - index: 0
+    name: Velocity Y
+  - index: 0
+    name: Front Velocity
+  - index: 0
+    name: Velocity XZ
+  - index: 0
+    name: Stick Move
+  commands:
+  - inputString: Jump
+    state: 1
+  - inputString: Dash
+    state: 2
+  - inputString: 
+    state: 0
+  - inputString: 
+    state: 0
+  - inputString: 
+    state: 0
